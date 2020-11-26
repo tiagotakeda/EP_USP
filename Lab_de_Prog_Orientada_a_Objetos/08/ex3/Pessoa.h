@@ -18,7 +18,7 @@ public:
 protected:
     string nome;
     int nusp;
-    static int nusp_auto = 12345678;
+    static int nusp_auto;
 };
 
 #endif // PESSOA_H

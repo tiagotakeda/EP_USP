@@ -1,7 +1,9 @@
 #include "Pessoa.h"
 
-Pessoa::Pessoa(string nome) : Participante (nome){
-    nusp_auto++;
+int Pessoa::nusp_auto = 12346577;
+
+Pessoa::Pessoa(string nome) : Participante(nome){
+    Pessoa::nusp_auto++;
 }
 
 Pessoa::Pessoa(string nome, int nusp) : Participante(nome){
@@ -21,5 +23,5 @@ void Pessoa::imprimir(){
 }
 
 int Pessoa::getNuspAuto(){
-    return this->nusp_auto;
+    return Pessoa::nusp_auto;
 }
