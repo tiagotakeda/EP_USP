@@ -4,6 +4,9 @@ Participante::Participante(string nome){
     this->nome = nome;
 }
 
-Participante::~Participante(){
-    
+Participante::~Participante(){    
+}
+
+string Participante::getNome(){
+    return this->nome;
 }

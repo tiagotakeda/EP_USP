@@ -1,12 +1,13 @@
 #include "Equipe.h"
 
-Equipe::Equipe(string nome, int maxValor) :
-nome(nome), maxValor(maxValor) {
+Equipe::Equipe(string nome, int maxValor) : Participante(nome) {
     pessoas = new Pessoa*[maxValor];
+    this->nome = nome;
+    this->maxValor = maxValor;
 }
 
 Equipe::~Equipe() {
-	delete[] nusps;
+	delete[] pessoas;
 }
 
 bool Equipe::adicionar(Pessoa* p) {
@@ -19,6 +20,6 @@ bool Equipe::adicionar(Pessoa* p) {
     return true;
 }
 
-int* Equipe::getPessoas() {
+Pessoa** Equipe::getPessoas() {
     return pessoas;
 }

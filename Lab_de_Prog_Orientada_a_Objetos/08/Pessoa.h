@@ -12,6 +12,7 @@ public:
     virtual ~Pessoa();
 
     virtual int getNusp();
+    void imprimir();
 protected:
     string nome;
     int nusp;

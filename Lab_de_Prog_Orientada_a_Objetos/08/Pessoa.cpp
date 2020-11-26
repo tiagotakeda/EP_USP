@@ -8,14 +8,10 @@ Pessoa::~Pessoa(){
 
 }
 
-string Pessoa::getNome(){
-    return this->nome;
+int Pessoa::getNusp(){
+    return this->nusp;
 }
 
 void Pessoa::imprimir(){
-    cout << "Nome: " << getNome() << " " << "NUSP: " << getNusp() << endl;
-}
-
-int Pessoa::getNusp(){
-    return this->nusp;
+    cout << "Nome: " << getNome() << " NUSP: " << getNusp() << endl;
 }

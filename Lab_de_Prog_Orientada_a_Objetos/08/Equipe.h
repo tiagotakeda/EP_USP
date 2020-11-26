@@ -12,16 +12,15 @@ public:
     Equipe(string nome, int maxValor);
     virtual ~Equipe();
 
-    virtual bool adicionar(int nusp);
     virtual bool adicionar(Pessoa* p);
-    virtual int* getPessoas();
+    virtual Pessoa** getPessoas();
 
 private:
     string nome;
     int maxValor;
     int quantidade;
 
-    Pessoa* pessoas;
+    Pessoa** pessoas;
 };
 
 #endif // EQUIPE_H
