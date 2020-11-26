@@ -7,10 +7,10 @@ CentroAcademico::CentroAcademico(Pessoa* presidente, string sigla) : presidente 
 CentroAcademico::~CentroAcademico(){
 }
 
-string getSigla(){
+string CentroAcademico::getSigla(){
     return this->sigla;
 }
 
-Pessoa* getPresidente(){
+Pessoa* CentroAcademico::getPresidente(){
     return this->presidente;
 }
