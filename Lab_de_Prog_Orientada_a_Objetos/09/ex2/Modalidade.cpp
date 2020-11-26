@@ -19,11 +19,20 @@ void Modalidade::adicionar(Equipe* e) {
         throw new overflow_error("Vetor cheio");
     }
     
+    for(int i = 0; i < quantidade; i++){
+        if(e == equipes[i]){
+            throw new EquipeRepetida("Equipe Repetida");
+        }
+    }
+    
     try{
         equipes[quantidade] = e;
         quantidade++;
     }catch(overflow_error *e){
-        cout << "ERRO: " << e->what() << endl;
+        cout << "ERROR: " << e->what() << endl;
+        delete e;
+    }catch(EquipeRepetida *e){
+        cout << "ERROR: " << e->what() << endl;
         delete e;
     }
 }
@@ -45,4 +54,3 @@ void Modalidade::imprimir() {
         equipes[i]->imprimir();
     }
 }
-

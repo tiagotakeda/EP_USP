@@ -17,9 +17,14 @@ Modalidade::~Modalidade() {
 void Modalidade::adicionar(Equipe* e) {
     if(quantidade == maximoEquipes){
         throw new overflow_error("Vetor cheio");
-    }else{
+    }
+    
+    try{
         equipes[quantidade] = e;
         quantidade++;
+    }catch(overflow_error *e){
+        cout << "ERRO: " << e->what() << endl;
+        delete e;
     }
 }
 
@@ -40,3 +45,4 @@ void Modalidade::imprimir() {
         equipes[i]->imprimir();
     }
 }
+
