@@ -1,3 +1,6 @@
 [submodule "Ep2"]
 	path = Ep2
 	url = https://github.com/tiagotakeda/Ep2-2020
+[submodule "Ep1"]
+	path = Ep1
+	url = https://github.com/RicardoCLake/Ep1---2020
